@@ -31,29 +31,29 @@ export const ButtonComponent: FC<Props> = ({ title, img, width, height, instagra
                         </Box >
                     }
                     <Box display='flex' justifyContent='center'>
-                        <NextLink href={instagram}  passHref>
+                        <NextLink href={instagram} passHref>
 
                             <Link sx={{ m: 1 }}>
-                                <Button variant='outlined'
-                                    sx={{ borderColor: 'black' }}
+                                <Box sx={{ border: '1px solid black', borderRadius:'9px' }}
+                                    display='flex' justifyContent='center' alignItems='center'
                                 >
-                                    <InstagramIcon sx={{ color: 'black', fontSize: '30px' }} />
-                                </Button>
+                                    <InstagramIcon sx={{ color: 'black', fontSize: '30px', m:0.3 }} />
+                                </Box>
                             </Link>
                         </NextLink>
                         <NextLink href={web} passHref>
 
                             <Link sx={{ m: 1 }}>
-                                <Button variant='outlined'
-                                    sx={{ borderColor: 'black' }}
+                            <Box sx={{ border: '1px solid black', borderRadius:'9px' }}
+                                    display='flex' justifyContent='center' alignItems='center'
                                 >
 
                                     {
                                         title.includes('FULFILLMENT')
-                                            ? <WhatsAppIcon sx={{ color: 'black', fontSize: '30px' }} />
-                                            : <LanguageIcon sx={{ color: 'black', fontSize: '30px' }} />
+                                            ? <WhatsAppIcon sx={{ color: 'black', fontSize: '30px', m:0.3 }} />
+                                            : <LanguageIcon sx={{ color: 'black', fontSize: '30px', m:0.3 }} />
                                     }
-                                </Button>
+                                </Box>
                             </Link>
                         </NextLink>
                     </Box>
